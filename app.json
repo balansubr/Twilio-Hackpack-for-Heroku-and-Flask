@@ -1,0 +1,31 @@
+{
+    "name": "Twilio Hackpack for Heroku and Flask",
+    "description": "An easy-to-use repo to kickstart your Twilio app using Flask and deploy onto Heroku. Easy to clone, easy to tweak, easy to deploy.",
+    "keywords": ["Twilio", "Hackpack", "client", "voice", "sms"],
+    "website": "https://github.com/kwhinnery/Twilio-Hackpack-for-Heroku-and-Flask",
+    "success_url": "/",
+    "env": {
+        "TWILIO_ACCOUNT_SID": {
+            "description": "You can find this on your Twilio Account info page",
+            "required": true
+        },
+        "TWILIO_AUTH_TOKEN": {
+            "description": "You can find this on your Twilio Account info page",
+            "required": true
+        },
+        "CALLER_ID": {
+            "description": "Outgoing Caller ID you have previously validated with Twilio",
+            "required": true
+        },
+        "TWILIO_APP_SID": {
+            "description": "base URL of this application. Set this with the resolved success URL returned on successful setup",
+            "value": ""
+        },
+    "addons": [
+    	"papertrail"
+    ],
+    "scripts": {
+    	"postdeploy":"python configure.py"
+    }
+}
+

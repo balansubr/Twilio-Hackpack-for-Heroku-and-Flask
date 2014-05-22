@@ -20,7 +20,8 @@
         "TWILIO_APP_SID": {
             "description": "base URL of this application. Set this with the resolved success URL returned on successful setup",
             "value": ""
-        },
+        }
+    }, 
     "addons": [
     	"papertrail"
     ],
